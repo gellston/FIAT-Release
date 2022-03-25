@@ -1,5 +1,5 @@
 
-<img src="https://github.com/gellston/FIAT/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
 FIAT 0.6 (Fast Image Annotation Tool)
 =======================
 
@@ -15,7 +15,7 @@ Development Environment
 Download
 =======================
 
-- <a href="https://github.com/gellston/FIAT/releases/download/0.6/FIAT.exe" target="_blank">FIAT 0.6 download</a>
+- <a href="https://github.com/gellston/FIAT-Release/releases/download/0.6/FIAT.exe" target="_blank">FIAT 0.6 download</a>
 - <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.2-windows-x64-installer" target="_blank">.NET6 framework</a>
 
 Reference
@@ -27,22 +27,22 @@ DEMO
 =======================
 - Classification
 <center>
-<img src="https://github.com/gellston/FIAT/blob/0.6/snapshoot/FIAT-example.gif?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/FIAT-example.gif?raw=true"></img>
 </center>
 
 Menu
 =======================
 <center>
-<img src="https://github.com/gellston/FIAT/blob/0.6/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
 </center>
 
 Shortcut Key
 =======================
-* F1~F12 : Label the image with the target label at that index
-* Ctrl + S : Save all label information
-* Ctrl + O : Open image folder
-* Up : Previous image
-* Down : Next image
+* **F1~F12** : Label the image with the target label at that index
+* **Ctrl + S** : Save all label information
+* **Ctrl + O** : Open image folder
+* **Up** : Previous image
+* **Down** : Next image
 
 PyTorch training loop example
 =======================
@@ -94,15 +94,15 @@ y_input shape =  torch.Size([1, 4])
 Strcture
 =======================
 ### Classification
-<img src="https://github.com/gellston/FIAT/blob/main/snapshoot/snapshot1.jpg?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/snapshot1.jpg?raw=true"></img>
 
 - __target_info.json 
     - File containing representative label information
-    - <img src="https://github.com/gellston/FIAT/blob/main/snapshoot/__target_info.jpg?raw=true" width=300></img>
+    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/__target_info.jpg?raw=true" width=300></img>
     
 - (each file).json 
     - A file containing user-labeled information about an image.
-    - <img src="https://github.com/gellston/FIAT/blob/main/snapshoot/each_file.jpg?raw=true" width=600></img>
+    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/each_file.jpg?raw=true" width=600></img>
 
 
 
