@@ -72,6 +72,8 @@ class FIATClassificationDataset(Dataset):
             image = cv2.resize(image, dsize=(self.label_width, self.label_height), interpolation=cv2.INTER_AREA)
             image = image.transpose(2, 0, 1)  # (H, W, CH) -> (CH, H, W)
             image = np.ascontiguousarray(image)
+            if self.isNorm == True:
+                image = image / 255
             x = torch.tensor(image, dtype=torch.float32)
 
 
