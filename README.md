@@ -108,11 +108,47 @@ Strcture
 
 - __target_info.json 
     - File containing representative label information
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/__target_info.jpg?raw=true" width=300></img>
-    
+```json
+[
+    {
+        "Color":"#FFFF0000",
+        "Name":"Bread"
+        
+    },
+    {
+        "Color":"#FF008000",
+        "Name":"Pizza"
+        
+    },
+    {
+        "Color":"#FFFFFFFF",
+        "Name":"Hamburger"
+        
+    },
+    {
+        "Color":"#FFF79646",
+        "Name":"Chicken"
+        
+    }
+]
+```
+
 - (each file).json 
     - A file containing user-labeled information about an image.
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/each_file.jpg?raw=true" width=600></img>
+```json
+{
+    "FileName":"1_1_bread.jpg",
+    "FilePath":"C:\\Users\\wantr\\Desktop\\food\\1_1_bread.jpg",
+    "ClassCollection":[
+        {
+            "Color":"#FFFF0000",
+            "Name":"Bread"
+            
+        }
+    ]
+    
+}
+```
 
 
 
