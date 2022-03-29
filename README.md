@@ -19,8 +19,8 @@ Download
 
 Reference
 =======================
-- <a href="https://github.com/gellston/FIAT/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
-- <a href="https://github.com/gellston/FIAT/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
+- <a href="https://github.com/gellston/FIAT-Release/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
+- <a href="https://github.com/gellston/FIAT-Release/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
 
 DEMO
 =======================
