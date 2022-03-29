@@ -1,4 +1,3 @@
-gkr
 <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
 FIAT 0.6 (Fast Image Annotation Tool)
 =======================
@@ -56,10 +55,10 @@ Shortcut Key
 | Shortcut Key | Function |
 |---|---|
 | <kbd>F1</kbd> ~ <kbd>F12</kbd> | ***Label the image with the target label at that index*** |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | ***Save all label information*** |
+| <kbd>Ctrl</kbd> + <kbd>O</kbd> | ***Open image folder*** |
+| <kbd>Up</kbd> | ***Previous image*** |
+| <kbd>Down</kbd> | ***Next image***  |
 
 PyTorch training loop example
 =======================
