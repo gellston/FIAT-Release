@@ -1,4 +1,4 @@
-
+gkr
 <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
 FIAT 0.6 (Fast Image Annotation Tool)
 =======================
@@ -36,6 +36,15 @@ Menu
 <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
 </center>
 
+| No | Function | No | Function |
+|---|---|---|---|
+| ***1*** | ***Open image folder*** | ***2*** | ***Save dataset*** |
+| ***3*** | ***Add target label*** | ***4*** | ***Delete target label*** |
+| ***5*** | ***Add label*** | ***6*** | ***Delete label*** |
+| ***7*** | ***Add label on all*** | ***8*** | ***Delete label on all*** |
+| ***9*** | ***Previous image*** | ***10*** | ***Nex image*** |
+| ***11*** | ***Progress bar*** |  |  |
+
 Shortcut Key
 =======================
 * **F1~F12** : Label the image with the target label at that index
@@ -43,6 +52,14 @@ Shortcut Key
 * **Ctrl + O** : Open image folder
 * **Up** : Previous image
 * **Down** : Next image
+
+| Shortcut Key | Function |
+|---|---|
+| <kbd>F1</kbd> ~ <kbd>F12</kbd> | ***Label the image with the target label at that index*** |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
 
 PyTorch training loop example
 =======================
