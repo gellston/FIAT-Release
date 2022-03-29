@@ -1,4 +1,3 @@
-
 <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
 FIAT 0.6 (Fast Image Annotation Tool)
 =======================
@@ -20,8 +19,8 @@ Download
 
 Reference
 =======================
-- <a href="https://github.com/gellston/FIAT/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
-- <a href="https://github.com/gellston/FIAT/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
+- <a href="https://github.com/gellston/FIAT-Release/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
+- <a href="https://github.com/gellston/FIAT-Release/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
 
 DEMO
 =======================
@@ -33,16 +32,27 @@ DEMO
 Menu
 =======================
 <center>
-<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/0.7/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
 </center>
+
+| No | Function | No | Function |
+|---|---|---|---|
+| ***1*** | ***Open image folder*** | ***2*** | ***Save dataset*** |
+| ***3*** | ***Add target label*** | ***4*** | ***Delete target label*** |
+| ***5*** | ***Add label*** | ***6*** | ***Delete label*** |
+| ***7*** | ***Add label on all*** | ***8*** | ***Delete label on all*** |
+| ***9*** | ***Previous image*** | ***10*** | ***Nex image*** |
+| ***11*** | ***Progress bar*** |  |  |
 
 Shortcut Key
 =======================
-* **F1~F12** : Label the image with the target label at that index
-* **Ctrl + S** : Save all label information
-* **Ctrl + O** : Open image folder
-* **Up** : Previous image
-* **Down** : Next image
+| Shortcut Key | Function |
+|---|---|
+| <kbd>F1</kbd> ~ <kbd>F12</kbd> | ***Label the image with the target label at that index*** |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | ***Save all label information*** |
+| <kbd>Ctrl</kbd> + <kbd>O</kbd> | ***Open image folder*** |
+| <kbd>Up</kbd> | ***Previous image*** |
+| <kbd>Down</kbd> | ***Next image***  |
 
 PyTorch training loop example
 =======================
@@ -98,11 +108,47 @@ Strcture
 
 - __target_info.json 
     - File containing representative label information
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/__target_info.jpg?raw=true" width=300></img>
-    
+```json
+[
+    {
+        "Color":"#FFFF0000",
+        "Name":"Bread"
+        
+    },
+    {
+        "Color":"#FF008000",
+        "Name":"Pizza"
+        
+    },
+    {
+        "Color":"#FFFFFFFF",
+        "Name":"Hamburger"
+        
+    },
+    {
+        "Color":"#FFF79646",
+        "Name":"Chicken"
+        
+    }
+]
+```
+
 - (each file).json 
     - A file containing user-labeled information about an image.
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/each_file.jpg?raw=true" width=600></img>
+```json
+{
+    "FileName":"1_1_bread.jpg",
+    "FilePath":"C:\\Users\\Fiat\\Desktop\\food\\1_1_bread.jpg",
+    "ClassCollection":[
+        {
+            "Color":"#FFFF0000",
+            "Name":"Bread"
+            
+        }
+    ]
+    
+}
+```
 
 
 
