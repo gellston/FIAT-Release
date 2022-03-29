@@ -46,12 +46,6 @@ Menu
 
 Shortcut Key
 =======================
-* **F1~F12** : Label the image with the target label at that index
-* **Ctrl + S** : Save all label information
-* **Ctrl + O** : Open image folder
-* **Up** : Previous image
-* **Down** : Next image
-
 | Shortcut Key | Function |
 |---|---|
 | <kbd>F1</kbd> ~ <kbd>F12</kbd> | ***Label the image with the target label at that index*** |
