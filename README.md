@@ -32,7 +32,7 @@ DEMO
 Menu
 =======================
 <center>
-<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/0.7/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
 </center>
 
 | No | Function | No | Function |
