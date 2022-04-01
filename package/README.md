@@ -1,4 +1,3 @@
-
 <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/icons8_price_tag_96px.png?raw=true" width=40 height=40></img>
 FIAT 0.7 (Fast Image Annotation Tool)
 =======================
@@ -10,18 +9,23 @@ Development Environment
 =======================
  - **Visual Studio 2022**
  - **Microsoft .NET 6**
-
+ 
+Installation
+=======================
+``` console
+pip install fiat-tool 
+```
 
 Download
 =======================
 
-- <a href="https://github.com/gellston/FIAT-Release/releases/download/0.6/FIAT.exe" target="_blank">FIAT download</a>
+- <a href="https://github.com/gellston/FIAT-Release/releases/download/0.6/FIAT.exe" target="_blank">FIAT Labeling tool download</a>
 - <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.2-windows-x64-installer" target="_blank">.NET6 framework</a>
 
 Reference
 =======================
-- <a href="https://github.com/gellston/FIAT/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
-- <a href="https://github.com/gellston/FIAT/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
+- <a href="https://github.com/gellston/FIAT-Release/tree/main/example_dataset" target="_blank">FIAT dataset example</a>
+- <a href="https://github.com/gellston/FIAT-Release/blob/main/python/torch_classification_FIATC_test.py" target="_blank">PyTorch training loop example (classification)</a>
 
 DEMO
 =======================
@@ -33,40 +37,47 @@ DEMO
 Menu
 =======================
 <center>
-<img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
+<img src="https://github.com/gellston/FIAT-Release/blob/0.7/snapshoot/how%20to%20use%20and%20shortcut%20key.jpg?raw=true"></img>
 </center>
+
+| No | Function | No | Function |
+|---|---|---|---|
+| ***1*** | ***Open image folder*** | ***2*** | ***Save dataset*** |
+| ***3*** | ***Add target label*** | ***4*** | ***Delete target label*** |
+| ***5*** | ***Add label*** | ***6*** | ***Delete label*** |
+| ***7*** | ***Add label on all*** | ***8*** | ***Delete label on all*** |
+| ***9*** | ***Previous image*** | ***10*** | ***Nex image*** |
+| ***11*** | ***Progress bar*** |  |  |
 
 Shortcut Key
 =======================
-* **F1~F12** : Label the image with the target label at that index
-* **Ctrl + S** : Save all label information
-* **Ctrl + O** : Open image folder
-* **Up** : Previous image
-* **Down** : Next image
+| Shortcut Key | Function |
+|---|---|
+| <kbd>F1</kbd> ~ <kbd>F12</kbd> | ***Label the image with the target label at that index*** |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | ***Save all label information*** |
+| <kbd>Ctrl</kbd> + <kbd>O</kbd> | ***Open image folder*** |
+| <kbd>Up</kbd> | ***Previous image*** |
+| <kbd>Down</kbd> | ***Next image***  |
 
 PyTorch training loop example
 =======================
 ``` python
-import torch
-import torch.nn as nn
-
+from fiat_tool.FIATClassificationDataset import FIATClassificationDataset
 from torch.utils.data import DataLoader
-
-from util.FIATClassificationDataset import FIATClassificationDataset
 
 
 batch_size = 1
 training_epochs = 1
 
-datasets = FIATClassificationDataset('C://Github//FIAT//example_dataset//food//',   #FIAT dataset path
-                                     label_height=224,  #image height
-                                     label_width=224,   #image width
-                                     isColor=True,      #color load flag
-                                     isNorm=False)      #0~1 normalization flag
+datasets = FIATClassificationDataset('C://Github//FIAT//example_dataset//food//',
+                                     label_height=224,
+                                     label_width=224,
+                                     isColor=True,
+                                     isNorm=False)
 
 data_loader = DataLoader(datasets, batch_size=batch_size, shuffle=True)
 
-for epoch in range(training_epochs):
+for epoch in range(training_epochs): # 앞서 training_epochs의 값은 15로 지정함.
     avg_cost = 0
     avg_acc = 0
     total_batch = len(data_loader)
@@ -75,8 +86,10 @@ for epoch in range(training_epochs):
         print('x_input shape = ', x_input.shape)
         print('y_input shape = ', y_input.shape)
 
-print('Training loop finished')
 
+
+
+print('Training loop finished')
 ```
 ``` console
 C:\Python\python.exe C:/Github/FIAT/python/torch_classification_FIATC_test.py
@@ -98,11 +111,47 @@ Strcture
 
 - __target_info.json 
     - File containing representative label information
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/__target_info.jpg?raw=true" width=300></img>
-    
+```json
+[
+    {
+        "Color":"#FFFF0000",
+        "Name":"Bread"
+        
+    },
+    {
+        "Color":"#FF008000",
+        "Name":"Pizza"
+        
+    },
+    {
+        "Color":"#FFFFFFFF",
+        "Name":"Hamburger"
+        
+    },
+    {
+        "Color":"#FFF79646",
+        "Name":"Chicken"
+        
+    }
+]
+```
+
 - (each file).json 
     - A file containing user-labeled information about an image.
-    - <img src="https://github.com/gellston/FIAT-Release/blob/main/snapshoot/each_file.jpg?raw=true" width=600></img>
+```json
+{
+    "FileName":"1_1_bread.jpg",
+    "FilePath":"C:\\Users\\Fiat\\Desktop\\food\\1_1_bread.jpg",
+    "ClassCollection":[
+        {
+            "Color":"#FFFF0000",
+            "Name":"Bread"
+            
+        }
+    ]
+    
+}
+```
 
 
 
