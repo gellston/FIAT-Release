@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="UTF-8") as fh:
     long_description = fh.read()
 
 
 setup(name='fiat-tool',
-version='0.7.0.10',
+version='0.7.0.11',
 description='Fast Image Annotation Tool, Free image labeling tool for deep learning',
 author='FIAT Development Team',
 author_email='fiattool2022@gmail.com',
