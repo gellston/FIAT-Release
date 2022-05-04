@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="UTF-8") as fh:
 
 
 setup(name='fiat-tool',
-version='0.7.0.11',
+version='0.7.0.12',
 description='Fast Image Annotation Tool, Free image labeling tool for deep learning',
 author='FIAT Development Team',
 author_email='fiattool2022@gmail.com',
